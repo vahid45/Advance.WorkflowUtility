@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props" Condition="Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2110F684-C277-47E7-B8B9-6F17A579D0CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Advance.WorkflowUtility</RootNamespace>
+    <AssemblyName>Advance.WorkflowUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>VS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReactorLocation>"C:\Program Files (x86)\Eziriz\.NET Reactor\dotNET_Reactor.Console.exe"</ReactorLocation>
+    <ReactorProject>"C:\Users\mrvah\OneDrive\Sync My Plugin\AdvanceWorkflowUtilites\LicenseProject\AdvanceWorkflowUtilitiesLicense.nrproj"</ReactorProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Crm.Sdk">
+      <HintPath>D:\Software\Dynamics\SDK\9.0.35\Microsoft.Crm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy">
+      <HintPath>D:\Software\Dynamics\SDK\9.0.35\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk">
+      <HintPath>D:\Software\Dynamics\SDK\9.0.35\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Workflow">
+      <HintPath>D:\Software\Dynamics\SDK\9.0.35\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddProductToPriceList.cs" />
+    <Compile Include="Classes\PersianTools\NumberToWordsLib.cs" />
+    <Compile Include="ConcatString.cs" />
+    <Compile Include="Classes\PersianTools\PersianDate.cs" />
+    <Compile Include="QuotRecalculation.cs" />
+    <Compile Include="RemoveProductFromPriceList.cs" />
+    <Compile Include="SetOrderNumberEntities.cs" />
+    <Compile Include="WFAddManytoMany.cs" />
+    <Compile Include="WFCloneRecord.cs" />
+    <Compile Include="WFExecuteSQLJob.cs" />
+    <Compile Include="WFNumberToWords.cs" />
+    <Compile Include="WFCalculateBusinessDate.cs" />
+    <Compile Include="WFCalculateRollupField.cs" />
+    <Compile Include="Classes\Common.cs" />
+    <Compile Include="Classes\CRM\CRMHelper.cs" />
+    <Compile Include="Classes\CRM\CRMUtilityHelper.cs" />
+    <Compile Include="Classes\CRM\DynamicUrlParser.cs" />
+    <Compile Include="Classes\Loging.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="WFCancelRunningWorkflow.cs" />
+    <Compile Include="WFCheckNationalCode.cs" />
+    <Compile Include="WFConvertMiladiToShamsi.cs" />
+    <Compile Include="WFConvertOrderToInvoice.cs" />
+    <Compile Include="WFConvertQuoteToOrder.cs" />
+    <Compile Include="WFConvertShamsiToMiladi.cs" />
+    <Compile Include="WFCopyPriceList.cs" />
+    <Compile Include="WFCreateOrderProduct.cs" />
+    <Compile Include="WFDateDiffMinute.cs" />
+    <Compile Include="WFDiffDate.cs" />
+    <Compile Include="WFDuplicateDetection.cs" />
+    <Compile Include="WFExecuteWorkflowOnFetchXML.cs" />
+    <Compile Include="WFGetConfig.cs" />
+    <Compile Include="WFGetCurrencyByCode.cs" />
+    <Compile Include="WFGetCurrentUser.cs" />
+    <Compile Include="WFGetLenghtofString.cs" />
+    <Compile Include="WFGetManyToManyEntity.cs" />
+    <Compile Include="WFGetRandomLetterAndNumber.cs" />
+    <Compile Include="WFNoteCheckAttachment.cs" />
+    <Compile Include="WFNoteCopy.cs" />
+    <Compile Include="WFNoteDelete.cs" />
+    <Compile Include="WFNoteDeleteAttachment.cs" />
+    <Compile Include="WFNoteDeleteAttachmentByName.cs" />
+    <Compile Include="WFNoteMove.cs" />
+    <Compile Include="WFNoteUpdateText.cs" />
+    <Compile Include="WFNoteUpdateTitle.cs" />
+    <Compile Include="WFQualifyLead.cs" />
+    <Compile Include="WFRollupQuery.cs" />
+    <Compile Include="WFSetStageProcess.cs" />
+    <Compile Include="WFShareRecordWithTeam.cs" />
+    <Compile Include="WFShareRecordWithUser.cs" />
+    <Compile Include="WFStartWorkflowFromWorkflow.cs" />
+    <Compile Include="WFStringRemoveCharecter.cs" />
+    <Compile Include="WFUnshareRecordWithTeam.cs" />
+    <Compile Include="WFUnshareRecordWithUser.cs" />
+    <Compile Include="WFUpdateDisableEntity.cs" />
+    <Compile Include="WFUserInRole.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VS.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConditionalFormating.js" />
+    <Content Include="WordTemplate.js" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Reactor_Output="&lt;AssemblyLocation&gt;\&lt;AssemblyName&gt;_Secure\&lt;AssemblyFileName&gt;" Reactor_Configuration="Debug" Reactor_Project="C:\Users\mrvah\OneDrive\Sync My Plugin\AdvanceWorkflowUtilites\LicenseProject\AdvanceWorkflowUtilitiesLicense.nrproj" Reactor_Commands="" Reactor_Enabled="1" Reactor_Deploy="0" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
