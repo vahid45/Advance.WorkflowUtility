@@ -197,6 +197,15 @@ Recalculates a quote's prices.
 - **Inputs:**
   - Quote: Reference to the quote to recalculate
 
+### 24. WFRollupFieldCalculation
+Calculates a rollup field value for a specified record.
+- **Inputs:**
+  - Record URL: URL of the record to calculate the rollup field for
+  - Rollup Field Name: Name of the rollup field to calculate
+- **Outputs:**
+  - Success: Boolean indicating if the calculation was successful
+  - Message: Status or error message
+
 ## Installation
 
 1. Clone the repo
